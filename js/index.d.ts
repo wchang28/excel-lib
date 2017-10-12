@@ -11,5 +11,5 @@ export declare class ExcelReport {
     private static openExcelFile(excel_file);
     generate(): void;
     saveWorkbook(wrkbk: any, filepath: string): void;
-    populate(excelApp: any): void;
+    populate(excelApp: any): any;
 }

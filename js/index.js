@@ -78,7 +78,9 @@ var ExcelReport = /** @class */ (function () {
             throw "unable to save the file " + filepath + ". the file is probabily locked or already openned in Excel";
         }
     };
-    ExcelReport.prototype.populate = function (excelApp) { };
+    ExcelReport.prototype.populate = function (excelApp) {
+        return excelApp.Workbooks.Add(); // create a blank work book
+    };
     return ExcelReport;
 }());
 exports.ExcelReport = ExcelReport;

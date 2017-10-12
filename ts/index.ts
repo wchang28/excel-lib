@@ -70,5 +70,7 @@ export class ExcelReport {
         catch(e) {throw "unable to save the file " + filepath + ". the file is probabily locked or already openned in Excel";}
     }
 
-    populate(excelApp: any) {}
+    populate(excelApp: any) : any {
+        return excelApp.Workbooks.Add();    // create a blank work book
+    }
 }
